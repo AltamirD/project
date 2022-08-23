@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            
+        }
+        body{ 
+            background-color: #292929;
+            align-items: center;
+        }
+
+        .video{
+        margin-left: 27%;
+        margin-top: none;
+        align-items: center;
+        }
+
+        section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            margin-top: 2%;
+        }
+        .btn {
+            position: relative;
+            padding: 10px 50px;
+            border-radius: 30px;
+            text-decoration: none;
+            color: #292929;
+            background-color: #ff081e;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: 2s all ease-in-out;
+            overflow: hidden;
+        }
+        .btn::before {
+            position: absolute;
+            content: '';
+            width: 400px;
+            height: 400px;
+            background-color: #ececec;
+            top: -370px;
+            left: -120px;
+            border-radius: 45%;
+            transition: 2s all ease-in-out;
+            animation: wave 10s infinite linear;
+        }
+        .btn::after {
+            position: absolute;
+            content: '';
+            width: 400px;
+            height: 400px;
+            background-color: #ececec80;
+            top: -360px;
+            left: -125px;
+            border-radius: 45%;
+            transition: s all ease-in-out;
+            animation: wave 9s infinite linear;
+        }
+        .btn span{
+            position: relative;
+            z-index: 10;
+        }
+        .btn:hover {
+            color: #fff;
+        }
+        .btn:hover::before {
+            top: -450px;
+        }
+        .btn:hover::after {
+            top: -440px;
+        }
+        .h1 {
+            margin-top: 40px;
+            text-align: center;
+            color: #ff081e;
+            font-size: 35px;
+            background-color: rgb(255, 255, 255);
+            border-radius: 20px;
+            margin-block-end: 30px;
+            display: list-item;
+            
+        }
+        @keyframes wave {
+            0%{
+                transform: rotate(0deg);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+        @media screen and (max-width: 1366px){
+    .video {
+        max-width: 50%;
+    }  
+
+}
+
+    </style>
+    <div>
+        <h1 class="h1"><strong>Por pouco não fui derrubado!<br>Assista o vídeo...</strong></h1>
+    </div>
+</head>
+<body>
+    
+    <video class="video" muted width="620" height="340" controls autoplay loop>
+        <source src="altv.mp4.mp4" type="video/mp4">
+      </video>
+    <section>
+        <a href="https://www.youtube.com/channel/UC8eYptru9G1IWLP3lkmsT9g" class="btn" target="_blank">
+            <span>Inscreva-se no canal</span>
+        </a>
+    </section>
+    
+</body>
+</html>
